@@ -112,8 +112,8 @@ def send_message(to: str, message: str) -> None:
     _ = client.messages.create(from_=config.FROM, body=message, to=to)
 
 
-delete_directory_contents("data/db")
-delete_directory_contents("data/output")
+# delete_directory_contents("data/db")
+# delete_directory_contents("data/output")
 
 create_index('data/input/sample.pdf')
 
