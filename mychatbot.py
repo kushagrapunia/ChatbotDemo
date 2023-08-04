@@ -1,7 +1,6 @@
 import os
 from flask import Flask, request
 from twilio.rest import Client
-from dotenv import load_dotenv, find_dotenv
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chat_models import ChatOpenAI

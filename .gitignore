@@ -4,3 +4,4 @@
 *.tmp
 *.pyc
 data/
+*.parquet
