@@ -75,7 +75,7 @@ def create_conversation() -> ConversationalRetrievalChain:
 
     embeddings = OpenAIEmbeddings(
         openai_api_key=config.OPENAI_API_KEY
-    )
+    ) # type: ignore
 
     db = Chroma(
         persist_directory=persist_directory,
@@ -88,7 +88,7 @@ def create_conversation() -> ConversationalRetrievalChain:
     )
 
     return ConversationalRetrievalChain.from_llm(
-        llm=ChatOpenAI(),
+        llm=ChatOpenAI(), # type: ignore
         chain_type='stuff',
         retriever=db.as_retriever(),
         memory=memory,
